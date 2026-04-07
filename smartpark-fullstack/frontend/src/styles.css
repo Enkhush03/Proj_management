@@ -187,3 +187,42 @@ button, input, select { font: inherit; }
 }
 .muted { color: var(--slate-500); }
 .stat { font-size: 28px; font-weight: 800; }
+
+
+.hero-note {
+  display: inline-flex;
+  width: fit-content;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.map-shell {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--slate-200);
+}
+
+.leaflet-map {
+  width: 100%;
+  height: 100%;
+}
+
+
+.wrap-mobile { flex-wrap: wrap; }
+.grid-filter { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+.selected-summary { border-color: rgba(37,99,235,.25); }
+.park-card-button {
+  width: 100%;
+  text-align: left;
+  background: white;
+  border: 1px solid var(--slate-200);
+}
+.park-card-selected {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(37,99,235,.12), 0 12px 28px rgba(15, 23, 42, 0.08);
+}
