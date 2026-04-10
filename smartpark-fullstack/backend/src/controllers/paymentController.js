@@ -1,9 +1,9 @@
 import { bookingService } from '../services/bookingService.js';
 
 export const paymentController = {
-  pay(req, res, next) {
+  async pay(req, res, next) {
     try {
-      const booking = bookingService.markPaid({
+      const booking = await bookingService.markPaid({
         bookingId: req.params.bookingId,
         paymentMethod: req.body.paymentMethod,
       });

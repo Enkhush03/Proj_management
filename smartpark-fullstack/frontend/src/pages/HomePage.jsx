@@ -78,7 +78,7 @@ export default function HomePage() {
 
       <div className="card stack">
         <div className="row-between wrap-mobile">
-          <h3 style={{ margin: 0 }}>Хайлтын шүүлтүүр</h3>
+          <h3 style={{ margin: 0 }}>Шүүлтүүр</h3>
           <button type="button" className="btn btn-secondary" onClick={() => setFilters(defaultFilters)}>
             Reset
           </button>
@@ -162,7 +162,7 @@ export default function HomePage() {
             <span className="badge badge-blue">₮{selectedPark.hourlyRate.toLocaleString()}/цаг</span>
           </div>
           <Link to={`/parks/${selectedPark.id}`} className="btn btn-primary" style={{ textAlign: 'center' }}>
-            Дэлгэрэнгүй үзэх
+            Дэлгэрэнгүй харах
           </Link>
         </div>
       )}

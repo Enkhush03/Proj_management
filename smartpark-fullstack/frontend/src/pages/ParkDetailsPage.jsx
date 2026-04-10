@@ -45,7 +45,7 @@ export default function ParkDetailsPage() {
         </div>
 
         <div className="card stack">
-          <h3 style={{ margin: 0 }}>Тоноглол</h3>
+          <h3 style={{ margin: 0 }}>Features</h3>
           <div className="row" style={{ flexWrap: 'wrap' }}>
             {park.features.map((feature) => (
               <span key={feature} className="badge badge-blue">{feature}</span>
