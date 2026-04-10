@@ -1,13 +1,14 @@
 import dotenv from 'dotenv';
 import pg from 'pg';
+import { env } from './env.js';
 
 dotenv.config();
 
 const { Pool } = pg;
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: process.env.PGSSL === 'true' ? { rejectUnauthorized: false } : false,
+  connectionString: env.databaseUrl,
+  ssl: env.pgssl === 'true' ? { rejectUnauthorized: false } : false,
 });
 
 export async function query(text, params = []) {
