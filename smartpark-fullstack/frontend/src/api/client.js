@@ -1,7 +1,8 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
 
 async function request(path, options = {}) {
   const token = localStorage.getItem('smartpark_token');
+
   const response = await fetch(`${API_URL}${path}`, {
     headers: {
       'Content-Type': 'application/json',
@@ -21,6 +22,7 @@ async function request(path, options = {}) {
 }
 
 export const api = {
-  post: (path, body) => request(path, { method: 'POST', body: JSON.stringify(body) }),
+  post: (path, body) =>
+    request(path, { method: 'POST', body: JSON.stringify(body) }),
   get: (path) => request(path),
 };
