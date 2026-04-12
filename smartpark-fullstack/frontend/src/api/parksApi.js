@@ -13,11 +13,11 @@ function buildQuery(params = {}) {
 export const parksApi = {
   getAll: (params = {}) => {
     const query = buildQuery(params);
-    return api.get(`/parks${query ? `?${query}` : ''}`);
+    return api.get(`/api/parks${query ? `?${query}` : ''}`);
   },
   getNearby: ({ lat, lng, radiusKm = 5, maxHourlyRate, minAvailableSlots }) => {
     const query = buildQuery({ lat, lng, radiusKm, maxHourlyRate, minAvailableSlots });
-    return api.get(`/parks/nearby?${query}`);
+    return api.get(`/api/parks/nearby?${query}`);
   },
-  getOne: (parkId) => api.get(`/parks/${parkId}`),
+  getOne: (parkId) => api.get(`/api/parks/${parkId}`),
 };

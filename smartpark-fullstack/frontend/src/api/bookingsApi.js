@@ -1,7 +1,7 @@
 import { api } from './client';
 
 export const bookingsApi = {
-  create: (payload) => api.post('/bookings', payload),
-  getMine: () => api.get('/bookings/me'),
-  pay: (bookingId, payload) => api.post(`/payments/${bookingId}`, payload),
+  create: (payload) => api.post('/api/bookings', payload),
+  getMine: () => api.get('/api/bookings/me'),
+  pay: (bookingId, payload) => api.post(`/api/payments/${bookingId}`, payload),
 };
