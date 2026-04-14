@@ -8,7 +8,7 @@ export default function MainLayout() {
     <div className="app-shell">
       <header className="topbar">
         <div className="topbar-inner">
-          <div>
+          <div className="page-heading">
             <div className="brand">SmartPark</div>
             <div className="muted">Сайн байна уу, {user?.name}</div>
           </div>

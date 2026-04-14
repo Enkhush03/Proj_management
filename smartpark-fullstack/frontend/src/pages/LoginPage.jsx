@@ -40,8 +40,9 @@ export default function LoginPage() {
   return (
     <div className="auth-shell">
       <div className="auth-card">
+        <div className="auth-badge">SmartPark Access</div>
         <h1>Тавтай морил</h1>
-        <p>SmartPark систем рүү нэвтэрнэ үү.</p>
+        <p>SmartPark систем рүү нэвтэрч, ойролцоох зогсоолуудаа нэг дороос хянаарай.</p>
 
         {error && <div className="error-box">{error}</div>}
 
@@ -49,6 +50,7 @@ export default function LoginPage() {
           <div className="field">
             <label>Имэйл эсвэл Утас</label>
             <input
+              autoComplete="username"
               value={form.identity}
               onChange={(e) => setForm((prev) => ({ ...prev, identity: e.target.value }))}
               placeholder="example@mail.mn"
@@ -59,6 +61,7 @@ export default function LoginPage() {
             <label>Нууц үг</label>
             <input
               type="password"
+              autoComplete="current-password"
               value={form.password}
               onChange={(e) => setForm((prev) => ({ ...prev, password: e.target.value }))}
               placeholder="••••••••"
@@ -66,13 +69,16 @@ export default function LoginPage() {
             <small>Demo: Password123!</small>
           </div>
 
-          <button className="btn btn-primary" disabled={loading}>
+          <button className="btn btn-primary btn-block" disabled={loading}>
             {loading ? 'Нэвтэрч байна...' : 'Нэвтрэх'}
           </button>
         </form>
 
-        <p style={{ marginTop: 16 }}>
-          Бүртгэлгүй юу? <Link to="/signup" style={{ color: 'var(--blue)', fontWeight: 700 }}>Бүртгүүлэх</Link>
+        <p className="auth-footer">
+          Бүртгэлгүй юу?{' '}
+          <Link to="/signup" style={{ color: 'var(--primary)', fontWeight: 800 }}>
+            Бүртгүүлэх
+          </Link>
         </p>
       </div>
     </div>

@@ -72,10 +72,10 @@ export default function ParksMap({
                   <span>{park.address}</span>
                   <span>₮{park.hourlyRate.toLocaleString()}/цаг</span>
                   {park.distanceKm != null && <span>{park.distanceKm} км зайтай</span>}
-                  <button type="button" className="btn btn-secondary" onClick={() => onSelectPark?.(park)}>
+                  <button type="button" className="btn btn-secondary btn-block" onClick={() => onSelectPark?.(park)}>
                     Чиглэл харах
                   </button>
-                  <Link to={`/parks/${park.id}`} className="btn btn-primary" style={{ textAlign: 'center' }}>
+                  <Link to={`/parks/${park.id}`} className="btn btn-primary btn-block" style={{ textAlign: 'center' }}>
                     Дэлгэрэнгүй
                   </Link>
                 </div>
